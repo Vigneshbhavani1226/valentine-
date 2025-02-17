@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖 A Special Letter for You 💖</title>
+    <style>
+        body {
+            background-color: pink;
+            background-image: url(" https://wallpapers.com/images/high/i-love-black-and-white-note-nz26697orp6dkjjv.webp");
+            background-size: cover;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 90px;
+        }
+        #letter-container {
+            display: none;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        textarea {
+            width: 90%;
+            height: 200px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 16px;
+            resize: none;
+        }
+        button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: darkred;
+        }
+        .checkbox-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>💌 I Have Something Special to Say... 💌</h1>
+        <button onclick="openLetter()">Click to Open the Letter 💖</button>
+
+        <div id="letter-container">
+            <h2>Dear bujii thali ,</h2>
+            <textarea readonly>
+yala vunnav bhagunava ra nanna, hyd vachi epudiki 14 days aavutundi plus college sem iyyee 14 days 
+aavutundi naku 1400 years la vundi teliyadam ledhu , ela web page create chesi niku pettadam ela
+konchem nibba nibbi la vuntundi but ala feel avaku edhi [ love , kadhal,ishq,prema ]
+prapancham entha vuntundi oo telidhu kani  na prapancham oka 12 letters tho vuntundi "tanuja sushma"
+life ekada end aavutundi oo telidhu aadhi nitho end avvali korukuntunaa 
+pelli iyyaka kotha life start aavutundi ani antaru kani , naku matram 1st step to i stepped with you that moment naku aadhi life starting moment , valentine day ani edhi cheppadam ledhu , nuvu na dhanivi ani feel ela page create chesaa , lets feel my love with endless happiness  i hope "🤝"!❤️  
+            </textarea>
+            <h3>Will you be my forever love? 💕</h3>
+            <p>With all my heart,</p>
+            <p><strong>[vignesh]</strong></p>
+            
+            <div class="checkbox-container">
+                <input type="checkbox" id="agreeCheckbox">
+                <label for="agreeCheckbox">I Agree 💖</label>
+            </div>
+            
+            <button id="continueBtn" disabled onclick="redirectToNextPage()">Continue</button>
+        </div>
+    </div>
+
+    <script>
+        function openLetter() {
+            document.getElementById("letter-container").style.display = "block";
+        }
+        
+        document.getElementById("agreeCheckbox").addEventListener("change", function() {
+            document.getElementById("continueBtn").disabled = !this.checked;
+        });
+
+        function redirectToNextPage() {
+            window.location.href = "./vigtha4.html";
+        }
+    </script>
+
+</body>
+</html>

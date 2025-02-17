@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Time Capsule - Valentine's Special</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: url(" https://www.hdwallpapers.in/download/love_background-normal.jpg");
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+        .page {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+            transition: all 0.5s ease-in-out;
+            position: relative;
+            z-index: 2;
+        }
+        .message-box {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid white;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            color: black;
+            font-size: 1rem;
+            display: none;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            height: 100px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+        h1 {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        .pulse {
+            background: #ff477e;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .pulse:hover {
+            background: #e60050;
+            transform: scale(1.1);
+        }
+        .continue-btn {
+            background: #ff477e;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 15px;
+            display: none;
+            transition: all 0.3s ease;
+        }
+        .continue-btn:hover {
+            background: #e60050;
+            transform: scale(1.1);
+        }
+    </style>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("unlockButton").addEventListener("click", function () {
+                let dob = document.getElementById("dobInput").value;
+                let correctDOB = "26/10/2003";
+                let messageBox = document.getElementById("hiddenMessage");
+                let continueBtn = document.getElementById("continueButton");
+                if (dob === correctDOB) {
+                    messageBox.style.display = "block";
+                    messageBox.value = "You are my sun, my moon, and all my stars. No matter how many lifetimes pass, I will always find my way back to you. ❤️";
+                    continueBtn.style.display = "inline-block";
+                } else {
+                    alert("Incorrect date of birth. Try again!");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="welcome" class="page fade-in">
+        <h1 style="font: italic;">unlock my heart! 💖</h1>
+        <p>Unlock our special love story and relive our beautiful journey together.</p>
+        <input type="text" id="dobInput" class="input-field" placeholder="Enter DOB (DD/MM/YYYY)">
+        <button id="unlockButton" class="pulse">🔑 Unlock</button>
+        <textarea id="hiddenMessage" class="message-box" readonly></textarea>
+        <button id="continueButton" class="continue-btn" onclick="window.location.href='vigtha2.html'">Press & Continue ➡️</button>
+    </div>
+</body>
+</html>

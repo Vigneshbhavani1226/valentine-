@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Wave & Hearts</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: url("https://images.pexels.com/photos/1024960/pexels-photo-1024960.jpeg?cs=srgb&dl=pexels-asadphoto-1024960.jpg&fm=jpg");
+            font-family: Arial, sans-serif;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            background-size: cover;
+            flex-direction: column;
+        }
+        .heart-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            color: red;
+            animation: float 6s linear infinite;
+            opacity: 0;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 0;
+            }
+            20% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-10vh) scale(1);
+                opacity: 0;
+            }
+        }
+        .message {
+            font-size: 36px;
+            font-weight: bold;
+            color: black;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        button {
+            display: block;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: darkred;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart-container" id="heartContainer"></div>
+    <h1 class="message">WELCOME TO MY VIRTUAL WORLD</h1>
+    <button onclick="window.location.href= 'C:/Users/VICTUS/OneDrive/Documents/demo/vigtha1.html'">
+        Press Button
+    </button>
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerText = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+            heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+            heart.style.animationDelay = Math.random() * 6 + 's';
+            document.getElementById('heartContainer').appendChild(heart);
+            setTimeout(() => {
+                heart.remove();
+            }, 7000);
+        }
+        setInterval(createHeart, 500);
+    </script>
+</body>
+</html>
